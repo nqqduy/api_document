@@ -12,8 +12,6 @@
 
 **Config header**:
 
-Content-Type: "application/json"
-
 Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
 
 **Data raw**
@@ -30,14 +28,14 @@ userId=&gender=&querySearch=&userRole=&leave=&requestLeave&active
 | id | string | User's id | yes |
 | authorization | string | Must be sent with all client requests. This Token helps server to validate request source. Provided by ARTNGUIDE. | yes |
 | page | string | page order of display. | No (default: 1) |
-| size | string | number of items displayed on 1 page. | No (default: 1) |
+| size | string | number of items displayed on 1 page. | No (default: 20) |
 | userId | string | User's id | No |
 | gender | string | User's gender | No |
 | querySearch | string | query Search | No |
 | userRole | string | User's role | No |
-| leave | boolean | check if user left | No |
-| requestLeave | boolean | check if the user asked to leave | No |
-| active | string | | No |
+| leave | boolean | The user left | No |
+| requestLeave | boolean | The user asked to leave | No |
+| active | boolean | Active account | No |
 
 ## **RESPONSE**
 
