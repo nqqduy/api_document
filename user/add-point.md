@@ -1,12 +1,12 @@
-## # **Change User Activation**
+## # **Add Point For User**
 
-## **API Change User Activation**
+## **API Add Point For User**
 
 ### **POST**
 
-**Production**: [https://api.artnguide.co.kr/api/v1/user/change-active](https://api.artnguide.co.kr/api/v1/user/change-active)
+**Production**: [https://api.artnguide.co.kr/api/v1/user/add-point](https://api.artnguide.co.kr/api/v1/user/admin-update-user-info)
 
-**Test**: [https://dev-api.artnguide.co.kr/api/v1/user/change-active](https://dev-api.artnguide.co.kr/api/v1/user/change-active)
+**Test**: [https://dev-api.artnguide.co.kr/api/v1/user/add-point](https://dev-api.artnguide.co.kr/api/v1/user/add-point)
 
 ## **REQUEST**
 
@@ -21,8 +21,9 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 ```json
 {
     "userId": 1,
-    "active": true,
-    "displayName":
+    "amount": 2000000,
+    "note": "nothing",
+    "adminNote": "nothing"
 }
 ```
 
@@ -32,8 +33,9 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 | :-----------: | ------- | ----------------------------------------------------------------------------------------------------------------- | -------- |
 | authorization | string  | Must be sent with all client requests. This Token helps server to validate request source. Provided by ARTNGUIDE. | yes      |
 |    userId     | integer | User's id                                                                                                         | yes      |
-|    active     | boolean | active account                                                                                                    | yes      |
-|  displayName  | string  | User's display name                                                                                               | no       |
+|    amount     | integer | amount will be add                                                                                                | yes      |
+|   adminNote   | string  | Note of admin                                                                                                     | no       |
+|     note      | string  | note name                                                                                                         | no       |
 
 ## **RESPONSE**
 
@@ -43,7 +45,7 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 {
     "data": {
         "result": true,
-        "message": "Update information ok!",
+        "message": "Add 2000000 point success",
         "datas": null
     }
 }
@@ -54,11 +56,11 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 ```json
 {
     "errorCode": "Invalid_data",
-    "message": "VALIDATION ERROR Error: userId is required",
+    "message": "VALIDATION ERROR Error: wrong data in field userId",
     "payload": [
         {
             "dataPath": "PCIVEN_1000&DEV_0001&SUBSYS_00000000&REV_02\1&08",
-            "error": "userId is required"
+            "error": "wrong data in field userId"
         }
     ]
 }
@@ -82,9 +84,22 @@ Only for admin
 {
     "data": {
         "result": false,
-        "message": "Result not found!",
+        "message": "User not found!",
         "data": null,
         "errorCode": "user_404"
+    }
+}
+```
+
+### **ERROR 500 (Internal Server Error)**
+
+```json
+{
+    "data": {
+        "result": false,
+        "message": "Amount must be not equals 0",
+        "data": null,
+        "errorCode": "common_invalid_input"
     }
 }
 ```
@@ -93,14 +108,12 @@ Only for admin
 {
     "data": {
         "result": false,
-        "message": "User leave can not update",
+        "message": "Not enough point to withdraw",
         "data": null,
-        "errorCode": "user_leave"
+        "errorCode": "common_invalid_input"
     }
 }
 ```
-
-### **ERROR 500 (Internal Server Error)**
 
 ```json
 {

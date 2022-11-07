@@ -1,6 +1,6 @@
-## # **Update User Information**
+## # **Update User Information By Admin**
 
-## **API Update User Information**
+## **API Update User Information By Admin**
 
 ### **POST**
 
@@ -48,38 +48,36 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 }
 ```
 
-    userId:user.userId,
-    adminNote:user.adminNote
-
 ### **Parameter**
 
-|      Field       | Type    | Description                        | required |
-| :--------------: | ------- | ---------------------------------- | -------- |
-|      userId      | integer | User's id                          | yes      |
-|    adminNote     | string  | Note of admin                      | no       |
-|      avatar      | string  | User's avatar                      | no       |
-|   displayName    | string  | User's display name                | no       |
-|      email       | string  | User's email                       | no       |
-|   phoneNumber    | string  | User's phone number                | no       |
-|    smsReceive    | boolean | smsReceive                         | no       |
-|   emailReceive   | boolean | User's display name                | no       |
-|    biZipCode     | string  | zip code                           | no       |
-|    biAddress     | string  | Buyer address                      | no       |
-|    biAddress2    | string  | Buyer address 2                    | no       |
-|  biBankAccount   | string  | Buyer bank account                 | no       |
-| biBankHolderName | string  | Buyer bank holder name             | no       |
-|    biBankName    | string  | Buyer bank name                    | no       |
-|    birthDate     | date    | Buyer birthDate                    | no       |
-|    companyBc     | string  | Company bussiness code             | no       |
-|    companyCEO    | string  | Company CEO name                   | no       |
-|  companyZipCode  | string  | Company Zip Code                   | no       |
-|   companyField   | string  | Company Field                      | no       |
-|  companyAddress  | string  | Company Address                    | no       |
-| companyAddress2  | string  | Company Address 2                  | no       |
-|  companyStatus   | string  | Company status                     | no       |
-|   companyBlUrl   | string  | Company bussiness registration url | no       |
-|   companyName    | string  | Company name                       | no       |
-|   invoiceInfo    | string  | Invoice Infomation                 | no       |
+|      Field       | Type    | Description                                                                                                       | required |
+| :--------------: | ------- | ----------------------------------------------------------------------------------------------------------------- | -------- |
+|      userId      | integer | User's id                                                                                                         | yes      |
+|  authorization   | string  | Must be sent with all client requests. This Token helps server to validate request source. Provided by ARTNGUIDE. | yes      |
+|    adminNote     | string  | Note of admin                                                                                                     | no       |
+|      avatar      | string  | User's avatar                                                                                                     | no       |
+|   displayName    | string  | User's display name                                                                                               | no       |
+|      email       | string  | User's email                                                                                                      | no       |
+|   phoneNumber    | string  | User's phone number                                                                                               | no       |
+|    smsReceive    | boolean | smsReceive                                                                                                        | no       |
+|   emailReceive   | boolean | User's display name                                                                                               | no       |
+|    biZipCode     | string  | zip code                                                                                                          | no       |
+|    biAddress     | string  | Buyer address                                                                                                     | no       |
+|    biAddress2    | string  | Buyer address 2                                                                                                   | no       |
+|  biBankAccount   | string  | Buyer bank account                                                                                                | no       |
+| biBankHolderName | string  | Buyer bank holder name                                                                                            | no       |
+|    biBankName    | string  | Buyer bank name                                                                                                   | no       |
+|    birthDate     | date    | Buyer birthDate                                                                                                   | no       |
+|    companyBc     | string  | Company bussiness code                                                                                            | no       |
+|    companyCEO    | string  | Company CEO name                                                                                                  | no       |
+|  companyZipCode  | string  | Company Zip Code                                                                                                  | no       |
+|   companyField   | string  | Company Field                                                                                                     | no       |
+|  companyAddress  | string  | Company Address                                                                                                   | no       |
+| companyAddress2  | string  | Company Address 2                                                                                                 | no       |
+|  companyStatus   | string  | Company status                                                                                                    | no       |
+|   companyBlUrl   | string  | Company bussiness registration url                                                                                | no       |
+|   companyName    | string  | Company name                                                                                                      | no       |
+|   invoiceInfo    | string  | Invoice Infomation                                                                                                | no       |
 
 ## **RESPONSE**
 
