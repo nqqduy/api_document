@@ -119,7 +119,7 @@ userId=&gender=&querySearch=&userRole=&leave=&requestLeave&active
 
 ### **ERROR 401 (Unauthorized Error)**
 
-```json
+```
 Unauthorized
 ```
 
