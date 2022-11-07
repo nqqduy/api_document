@@ -112,6 +112,12 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 Unauthorized
 ```
 
+### **ERROR 403 (Forbidden Error)**
+
+```
+Forbidden
+```
+
 ### **ERROR 404 (Not Found)**
 
 ```json

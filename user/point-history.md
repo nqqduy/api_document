@@ -83,6 +83,12 @@ none
 Unauthorized
 ```
 
+### **ERROR 403 (Forbidden Error)**
+
+```
+Forbidden
+```
+
 ### **ERROR 404 (Not Found)**
 
 ```json
