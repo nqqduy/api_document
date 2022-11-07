@@ -4,7 +4,7 @@
 
 ### **GET**
 
-**Production**: [https://api.artnguide.co.kr/api/v1/user/details](https://api.artnguide.co.kr/api/v1/user/details)
+**Production**: [https://api.artnguide.co.kr/api/v1/user/details?id=](https://api.artnguide.co.kr/api/v1/user/details)
 
 **Test**: [https://dev-api.artnguide.co.kr/api/v1/user/details](https://dev-api.artnguide.co.kr/api/v1/user/details)
 
@@ -19,9 +19,7 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 **Data raw**
 
 ```json
-{
-  "id": "1"
-}
+none
 ```
 
 ### **Parameter**
@@ -37,62 +35,62 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 
 ```json
 {
-  "data": {
-    "result": true,
-    "message": "get success",
     "data": {
-      "userId": 123,
-      "userUserName": "duy nguyen",
-      "userEmail": "duynguyen@gmail.com",
-      "userUserName": "duynguyen",
-      "userDisplayName": "garen",
-      "userAvatar": "https://aws.s3/useravatar",
-      "userSnsId": "abn123",
-      "userGender": "male",
-      "userAccountType": "normal",
-      "userUserRole": "USER",
-      "userCreateTime": "2017-01-30 16:49:19",
-      "userUpdateTime": "2017-01-30 16:49:19",
-      "userLastLogin": "10/15/1997",
-      "userEmailReceive": true,
-      "userSmsReceive": false,
-      "userPoint": 120,
-      "userLoginCount": 1,
-      "userLeave": false,
-      "userIsDelete": false,
-      "userBirthDate": "10-15-1997",
-      "userAuthVerified": false,
-      "userVerifiedPhoneNumber": null,
-      "userPwEncryptMethod": "NEW",
-      "userIdOriginArtnguide": null,
-      "userCloneOfUid": null,
-      "userRequestLeave": false,
-      "userRequestLeaveAt": null,
-      "userNeedMigration": false,
-      "userOldPhoneNumber": "+84987438145",
-      "userAdminNote": "nothing",
-      "userVerifiedAt": null,
-      "userRegisteredAt": "2017-01-30 16:49:19 ",
-      "biInvoiceType": "VAT",
-      "biInvoiceInfo": "invoice information",
-      "biPhoneNumber": "+84021566478",
-      "biZipCode": "32131",
-      "biAddress": "Thu Binh District, Ho Chi Minh city",
-      "biAddress2": "Thu Duc District, Ho Chi Minh city",
-      "biBankAccount": "6532108745765",
-      "biBankHolderName": "Duy Nguyen",
-      "biBankName": "VIETCOMBNK",
-      "uciCompanyBc": "21321054",
-      "uciCompanyBlUrl": "https://aws.s3/url",
-      "uciCompanyName": "AIDEAVN",
-      "uciCompanyCeo": "Duy Nguyen",
-      "uciCompanyField": "IT",
-      "uciCompanyStatus": "active",
-      "uciCompanyZipCode": "1500",
-      "uciCompanyAddr1": "Tan Binh District, Ho Chi Minh city",
-      "uciCompanyAddr2": "Thu Duc District, Ho Chi Minh city"
+        "result": true,
+        "message": "get success",
+        "data": {
+            "userId": 123,
+            "userUserName": "duy nguyen",
+            "userEmail": "duynguyen@gmail.com",
+            "userUserName": "duynguyen",
+            "userDisplayName": "garen",
+            "userAvatar": "https://aws.s3/useravatar",
+            "userSnsId": "abn123",
+            "userGender": "male",
+            "userAccountType": "normal",
+            "userUserRole": "USER",
+            "userCreateTime": "2017-01-30 16:49:19",
+            "userUpdateTime": "2017-01-30 16:49:19",
+            "userLastLogin": "10/15/1997",
+            "userEmailReceive": true,
+            "userSmsReceive": false,
+            "userPoint": 120,
+            "userLoginCount": 1,
+            "userLeave": false,
+            "userIsDelete": false,
+            "userBirthDate": "10-15-1997",
+            "userAuthVerified": false,
+            "userVerifiedPhoneNumber": null,
+            "userPwEncryptMethod": "NEW",
+            "userIdOriginArtnguide": null,
+            "userCloneOfUid": null,
+            "userRequestLeave": false,
+            "userRequestLeaveAt": null,
+            "userNeedMigration": false,
+            "userOldPhoneNumber": "+84987438145",
+            "userAdminNote": "nothing",
+            "userVerifiedAt": null,
+            "userRegisteredAt": "2017-01-30 16:49:19 ",
+            "biInvoiceType": "VAT",
+            "biInvoiceInfo": "invoice information",
+            "biPhoneNumber": "+84021566478",
+            "biZipCode": "32131",
+            "biAddress": "Thu Binh District, Ho Chi Minh city",
+            "biAddress2": "Thu Duc District, Ho Chi Minh city",
+            "biBankAccount": "6532108745765",
+            "biBankHolderName": "Duy Nguyen",
+            "biBankName": "VIETCOMBNK",
+            "uciCompanyBc": "21321054",
+            "uciCompanyBlUrl": "https://aws.s3/url",
+            "uciCompanyName": "AIDEAVN",
+            "uciCompanyCeo": "Duy Nguyen",
+            "uciCompanyField": "IT",
+            "uciCompanyStatus": "active",
+            "uciCompanyZipCode": "1500",
+            "uciCompanyAddr1": "Tan Binh District, Ho Chi Minh city",
+            "uciCompanyAddr2": "Thu Duc District, Ho Chi Minh city"
+        }
     }
-  }
 }
 ```
 
@@ -100,14 +98,14 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 
 ```json
 {
-  "errorCode": "Invalid_data",
-  "message": "VALIDATION ERROR Error: Wrong data in field id!",
-  "payload": [
-    {
-      "dataPath": "PCIVEN_1000&DEV_0001&SUBSYS_00000000&REV_02\1&08",
-      "error": "Wrong data in field id!"
-    }
-  ]
+    "errorCode": "Invalid_data",
+    "message": "VALIDATION ERROR Error: Wrong data in field id!",
+    "payload": [
+        {
+            "dataPath": "PCIVEN_1000&DEV_0001&SUBSYS_00000000&REV_02\1&08",
+            "error": "Wrong data in field id!"
+        }
+    ]
 }
 ```
 
@@ -121,12 +119,12 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 
 ```json
 {
-  "data": {
-    "result": false,
-    "message": "User not found!",
-    "data": null,
-    "errorCode": "user_404"
-  }
+    "data": {
+        "result": false,
+        "message": "User not found!",
+        "data": null,
+        "errorCode": "user_404"
+    }
 }
 ```
 
@@ -134,11 +132,11 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 
 ```json
 {
-  "data": {
-    "result": false,
-    "message": "error database",
-    "data": null,
-    "errorCode": "sv_500"
-  }
+    "data": {
+        "result": false,
+        "message": "error database",
+        "data": null,
+        "errorCode": "sv_500"
+    }
 }
 ```

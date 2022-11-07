@@ -1,12 +1,12 @@
-## # **List User**
+## # **Change Permission**
 
 ## **API List User**
 
 ### **GET**
 
-**Production**: [https://api.artnguide.co.kr/api/v1/user/list-user?size=&page=&userId=&gender=&querySearch=&userRole=&leave=&requestLeave&active](https://api.artnguide.co.kr/api/v1/user/list-user?size=&page=&userId=&gender=&querySearch=&userRole=&leave=&requestLeave&active)
+**Production**: [https://api.artnguide.co.kr/api/v1/user/change-active](https://api.artnguide.co.kr/api/v1/user/change-active)
 
-**Test**: [https://dev-api.artnguide.co.kr/api/v1/user/list-user?size=&page=&userId=&gender=&querySearch=&userRole=&leave=&requestLeave&active](https://dev-api.artnguide.co.kr/api/v1/user/list-user?size=&page=&userId=&gender=&querySearch=&userRole=&leave=&requestLeave&active)
+**Test**: [https://dev-api.artnguide.co.kr/api/v1/user/change-active](https://dev-api.artnguide.co.kr/api/v1/user/change-active)
 
 ## **REQUEST**
 
@@ -19,25 +19,20 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 **Data raw**
 
 ```json
-none
+{
+    "page": "1",
+    "size": "20"
+}
 ```
 
 ### **Parameter**
 
-userId=&gender=&querySearch=&userRole=&leave=&requestLeave&active
-| Field | Type | Description | required |
+|     Field     | Type   | Description                                                                                                       | required        |
 | :-----------: | ------ | ----------------------------------------------------------------------------------------------------------------- | --------------- |
-| id | string | User's id | yes |
-| authorization | string | Must be sent with all client requests. This Token helps server to validate request source. Provided by ARTNGUIDE. | yes |
-| page | string | page order of display. | No (default: 1) |
-| size | string | number of items displayed on 1 page. | No (default: 1) |
-| userId | string | User's id | No |
-| gender | string | User's gender | No |
-| querySearch | string | query Search | No |
-| userRole | string | User's role | No |
-| leave | boolean | check if user left | No |
-| requestLeave | boolean | check if the user asked to leave | No |
-| active | string | | No |
+|      id       | string | User's id                                                                                                         | yes             |
+| authorization | string | Must be sent with all client requests. This Token helps server to validate request source. Provided by ARTNGUIDE. | yes             |
+|     page      | string | page order of display.                                                                                            | No (default: 1) |
+|     size      | string | number of items displayed on 1 page.                                                                              | No (default: 1) |
 
 ## **RESPONSE**
 
