@@ -110,7 +110,7 @@ none
 ### **ERROR 401 (Unauthorized Error)**
 
 ```json
-{}
+Unauthorized
 ```
 
 ### **ERROR 404 (Not Found)**

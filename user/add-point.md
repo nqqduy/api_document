@@ -69,7 +69,7 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 ### **ERROR 401 (Unauthorized Error)**
 
 ```json
-{}
+Unauthorized
 ```
 
 ### **ERROR 403 (forbidden)**
