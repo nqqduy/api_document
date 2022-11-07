@@ -68,6 +68,12 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 }
 ```
 
+### **ERROR 401 (Unauthorized Error)**
+
+```json
+{}
+```
+
 ### **ERROR 404 (Not Found)**
 
 ```json
