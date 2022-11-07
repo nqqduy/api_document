@@ -4,9 +4,9 @@
 
 ### **POST**
 
-**Production**: [https://api.artnguide.co.kr/api/v1/user/update-info](https://api.artnguide.co.kr/api/v1/user/update-info)
+**Production**: [https://api.artnguide.co.kr/api/v1/user/admin-update-user-info](https://api.artnguide.co.kr/api/v1/user/admin-update-user-info)
 
-**Test**: [https://dev-api.artnguide.co.kr/api/v1/user/update-info](https://dev-api.artnguide.co.kr/api/v1/user/update-info)
+**Test**: [https://dev-api.artnguide.co.kr/api/v1/user/admin-update-user-info](https://dev-api.artnguide.co.kr/api/v1/user/admin-update-user-info)
 
 ## **REQUEST**
 
@@ -43,17 +43,22 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
     "companyStatus": "active",
     "companyBlUrl": "https://www.hdhd.com/myBlURL",
     "companyName": "AIDEAVN",
-    "invoiceInfo": "invoiceInfo"
+    "invoiceInfo": "invoiceInfo",
+    "adminNote": "adminNote"
 }
 ```
+
+    userId:user.userId,
+    adminNote:user.adminNote
 
 ### **Parameter**
 
 |      Field       | Type    | Description                        | required |
 | :--------------: | ------- | ---------------------------------- | -------- |
-|        id        | integer | User's id                          | yes      |
+|      userId      | integer | User's id                          | yes      |
+|    adminNote     | string  | Note of admin                      | no       |
 |      avatar      | string  | User's avatar                      | no       |
-|   displayName    | boolean | User's display name                | no       |
+|   displayName    | string  | User's display name                | no       |
 |      email       | string  | User's email                       | no       |
 |   phoneNumber    | string  | User's phone number                | no       |
 |    smsReceive    | boolean | smsReceive                         | no       |
@@ -109,6 +114,12 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 
 ```json
 {}
+```
+
+### **ERROR 403 (forbidden)**
+
+```text
+Only for admin
 ```
 
 ### **ERROR 404 (Not Found)**
