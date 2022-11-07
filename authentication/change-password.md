@@ -27,10 +27,11 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 
 ### **Parameter**
 
-|    Field    | Type   | Description         | required |
-| :---------: | ------ | ------------------- | -------- |
-| newPassword | string | User's new password | yes      |
-| oldPassword | string | User's old password | yes      |
+|     Field     | Type   | Description                                                                                                       | required |
+| :-----------: | ------ | ----------------------------------------------------------------------------------------------------------------- | -------- |
+|  newPassword  | string | User's new password                                                                                               | yes      |
+|  oldPassword  | string | User's old password                                                                                               | yes      |
+| authorization | string | Must be sent with all client requests. This Token helps server to validate request source. Provided by ARTNGUIDE. | yes      |
 
 ## **RESPONSE**
 
@@ -52,11 +53,11 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 {}
 ```
 
-### **ERROR 400**
+### **ERROR 400 (Bad Request)**
 
 ```json
 {
-  "errorCode": true,
+  "errorCode": "invalid_data",
   "message": "VALIDATION ERROR Error: oldPassword is required!",
   "payload": [
     {
@@ -67,7 +68,7 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 }
 ```
 
-### **ERROR 404**
+### **ERROR 404 (Not Found)**
 
 ```json
 {
@@ -80,7 +81,7 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 }
 ```
 
-### **ERROR 500**
+### **ERROR 500 (Internal Server Error)**
 
 ```json
 {

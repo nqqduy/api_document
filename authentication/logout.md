@@ -24,7 +24,9 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 
 ### **Parameter**
 
-none
+|     Field     | Type   | Description                                                                                                       | required |
+| :-----------: | ------ | ----------------------------------------------------------------------------------------------------------------- | -------- |
+| authorization | string | Must be sent with all client requests. This Token helps server to validate request source. Provided by ARTNGUIDE. | yes      |
 
 ## **RESPONSE**
 
@@ -38,19 +40,10 @@ none
 }
 ```
 
-### **ERROR 400**
+### **ERROR 401 (Unauthorized Error)**
 
 ```json
-{
-  "errorCode": true,
-  "message": "VALIDATION ERROR Error: email is required!",
-  "payload": [
-    {
-      "dataPath": "PCIVEN_1000&DEV_0001&SUBSYS_00000000&REV_02\1&08",
-      "error": "email is required!"
-    }
-  ]
-}
+{}
 ```
 
 ### **ERROR 403 (forbidden)**

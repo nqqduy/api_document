@@ -53,11 +53,11 @@ Content-Type: "application/json"
 }
 ```
 
-### **ERROR 400**
+### **ERROR 400 (Bad Request)**
 
 ```json
 {
-  "errorCode": true,
+  "errorCode": "invalid_data",
   "message": "VALIDATION ERROR Error: snsAccessTokenOrCode is required!",
   "payload": [
     {
@@ -68,7 +68,7 @@ Content-Type: "application/json"
 }
 ```
 
-### **ERROR 500**
+### **ERROR 500 (Internal Server Error)**
 
 ```json
 {
