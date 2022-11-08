@@ -1,6 +1,6 @@
 ## # **Get New And Old Of Article**
 
-## **Get New And Old Of Article**
+## **API Get New And Old Of Article**
 
 ### **POST**
 
