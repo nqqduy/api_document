@@ -4,7 +4,7 @@
 
 ### **POST**
 
-**Production**: [https://api.artnguide.co.kr/api/v1/article/create](https://api.artnguide.co.kr/api/v1/user/admin-update-user-info)
+**Production**: [https://api.artnguide.co.kr/api/v1/article/create](https://api.artnguide.co.kr/api/v1/article/create)
 
 **Test**: [https://dev-api.artnguide.co.kr/api/v1/article/create](https://dev-api.artnguide.co.kr/api/v1/article/create)
 
