@@ -27,11 +27,11 @@ https://www.google.com:3000/
 
 ### **Parameter**
 
-|    Field     | Type   | Description               | required |
-| :----------: | ------ | ------------------------- | -------- |
-|     page     | string | Page number to display    | no       |
-|     size     | string | Number of items displayed | no       |
-| categoryCode | string | Article category code     | no       |
+|    Field     | Type   | Description               | required         |
+| :----------: | ------ | ------------------------- | ---------------- |
+|     page     | string | Page number to display    | no (default: 1)  |
+|     size     | string | Number of items displayed | no (default: 20) |
+| categoryCode | string | Article category code     | no               |
 
 ## **RESPONSE**
 
