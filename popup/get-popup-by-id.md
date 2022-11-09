@@ -62,11 +62,11 @@ Content-Type: "application/json"
 ```json
 {
     "errorCode": "Invalid_data",
-    "message": "VALIDATION ERROR Error: Missing field 'popupId'!",
+    "message": "VALIDATION ERROR Error: Wrong data in field page!",
     "payload": [
         {
             "dataPath": "PCIVEN_1000&DEV_0001&SUBSYS_00000000&REV_021&08",
-            "error": "Missing field 'popupId'!"
+            "error": "Wrong data in field page!"
         }
     ]
 }
