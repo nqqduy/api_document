@@ -1,12 +1,12 @@
-## # **Delete Popup**
+## # **Delete FAQ**
 
-## **API Delete Popup**
+## **API Delete FAQ**
 
 ### **POST**
 
-**Production**: [https://api.artnguide.co.kr/api/v1/popup/delete](https://api.artnguide.co.kr/api/v1/popup/delete)
+**Production**: [https://api.artnguide.co.kr/api/v1/faq/delete](https://api.artnguide.co.kr/api/v1/faq/delete)
 
-**Test**: [https://dev-api.artnguide.co.kr/api/v1/popup/delete](https://dev-api.artnguide.co.kr/api/v1/popup/delete)
+**Test**: [https://dev-api.artnguide.co.kr/api/v1/faq/delete](https://dev-api.artnguide.co.kr/api/v1/faq/delete)
 
 ## **REQUEST**
 
@@ -20,7 +20,7 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 
 ```json
 {
-    "popupId": 3
+    "faqId": 97
 }
 ```
 
@@ -29,7 +29,7 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 |     Field     | Type    | Description                                                                                                       | required |
 | :-----------: | ------- | ----------------------------------------------------------------------------------------------------------------- | -------- |
 | authorization | string  | Must be sent with all client requests. This Token helps server to validate request source. Provided by ARTNGUIDE. | yes      |
-|    popupId    | integer | Popup's id                                                                                                        | yes      |
+|     faqId     | integer | FAQ's id                                                                                                          | yes      |
 
 ## **RESPONSE**
 
@@ -38,25 +38,8 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 ```json
 {
     "result": true,
-    "message": "Delete Popup successfully!",
-    "data": {
-        "id": 3,
-        "title": "리뉴얼 홈페이지 이용안내",
-        "contentHtml": "<p><img src=\"https://artnguide.s3.ap-northeast-2.amazonaws.com/etc/artng_1663149004505_ok\"></p>",
-        "redirectUrl": "https://artnguide.co.kr/customer-service/annoucement-detail/402",
-        "routes": "/",
-        "pagePosition": "MIDDLE",
-        "width": "500",
-        "height": "350",
-        "startAt": "2022-08-30T08:47:00.000Z",
-        "endAt": "2022-09-30T08:43:40.000Z",
-        "showOnPc": true,
-        "showOnMobile": true,
-        "isDeleted": true,
-        "createdBy": 1,
-        "createdAt": "2022-08-30T08:45:52.000Z",
-        "updatedAt": "2022-09-14T09:50:07.000Z"
-    }
+    "message": "Delete successfully!",
+    "data": null
 }
 ```
 
@@ -65,11 +48,11 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 ```json
 {
     "errorCode": "Invalid_data",
-    "message": "VALIDATION ERROR Error: Missing field 'popupId'!",
+    "message": "VALIDATION ERROR Error: Missing field 'faqId'!",
     "payload": [
         {
             "dataPath": "PCIVEN_1000&DEV_0001&SUBSYS_00000000&REV_021&08",
-            "error": "Missing field 'popupId'!"
+            "error": "Missing field 'faqId'!"
         }
     ]
 }
@@ -93,9 +76,9 @@ Only for admin
 ```json
 {
     "result": false,
-    "message": "Popup not found!",
+    "message": "Faq not found!",
     "data": null,
-    "errorCode": "pop_404"
+    "errorCode": "faq_404"
 }
 ```
 

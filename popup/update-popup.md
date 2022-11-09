@@ -4,9 +4,9 @@
 
 ### **POST**
 
-**Production**: [https://api.artnguide.co.kr/api/v1/popup/Update](https://api.artnguide.co.kr/api/v1/popup/Update)
+**Production**: [https://api.artnguide.co.kr/api/v1/popup/update](https://api.artnguide.co.kr/api/v1/popup/update)
 
-**Test**: [https://dev-api.artnguide.co.kr/api/v1/popup/Update](https://dev-api.artnguide.co.kr/api/v1/popup/Update)
+**Test**: [https://dev-api.artnguide.co.kr/api/v1/popup/update](https://dev-api.artnguide.co.kr/api/v1/popup/update)
 
 ## **REQUEST**
 
