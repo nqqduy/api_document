@@ -1,12 +1,12 @@
-## # **Create All Top Artist**
+## # **Update All Top Artist**
 
-## **API Create All Top Artist**
+## **API Update All Top Artist**
 
 ### **POST**
 
-**Production**: [https://api.artnguide.co.kr/api/v1/top-artist/create](https://api.artnguide.co.kr/api/v1/top-artist/create)
+**Production**: [https://api.artnguide.co.kr/api/v1/top-artist/update](https://api.artnguide.co.kr/api/v1/top-artist/update)
 
-**Test**: [https://dev-api.artnguide.co.kr/api/v1/top-artist/create](https://dev-api.artnguide.co.kr/api/v1/top-artist/create)
+**Test**: [https://dev-api.artnguide.co.kr/api/v1/top-artist/update](https://dev-api.artnguide.co.kr/api/v1/top-artist/update)
 
 ## **REQUEST**
 
@@ -18,6 +18,7 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 
 ```json
 {
+    "id": 1,
     "authorName": "faker",
     "productName": "draw product",
     "price": 5000000,
@@ -31,6 +32,7 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 |         Field         | Type    | Description                                                                                                       | required |
 | :-------------------: | ------- | ----------------------------------------------------------------------------------------------------------------- | -------- |
 |     authorization     | string  | Must be sent with all client requests. This Token helps server to validate request source. Provided by ARTNGUIDE. | yes      |
+|          id           | integer | Top artist id                                                                                                     | yes      |
 |      authorName       | string  | Author name                                                                                                       | yes      |
 |      productName      | string  | Product name                                                                                                      | yes      |
 |         price         | integer | Final selling price                                                                                               | yes      |
@@ -44,7 +46,7 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 ```json
 {
     "result": true,
-    "message": "'Create successfully!",
+    "message": "Update successfully!",
     "data": null
 }
 ```
@@ -64,16 +66,24 @@ Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3
 }
 ```
 
+### **ERROR 404 (Not Found)**
+
+```json
+{
+    "result": false,
+    "message": "No data found!",
+    "data": null,
+    "errorCode": "ta_404"
+}
+```
+
 ### **ERROR 500 (Internal Server Error)**
 
 ```json
 {
-    "code": 500,
-    "data": {
-        "result": false,
-        "message": "error database",
-        "data": null,
-        "errorCode": "sv_500"
-    }
+    "result": false,
+    "message": "error database",
+    "data": null,
+    "errorCode": "sv_500"
 }
 ```
