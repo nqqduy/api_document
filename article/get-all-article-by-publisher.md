@@ -114,7 +114,7 @@ Only for admin
 
 ```json
 {
-    "code": 400,
+    "code": 404,
     "data": {
         "result": false,
         "message": "Article not found!",
@@ -128,7 +128,7 @@ Only for admin
 
 ```json
 {
-    "code": 400,
+    "code": 500,
     "data": {
         "result": false,
         "message": "error database",
