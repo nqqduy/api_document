@@ -1,4 +1,4 @@
-## # **Get All Banner**
+## # **Get All Top Artist**
 
 ## **API Get All Top Artist**
 
@@ -14,14 +14,8 @@
 
 **Data raw**
 
-```json
-{
-    "page": "2",
-    "size": "15",
-    "query": "blockchain",
-    "startTime": "2022-08-30T08:45:52.000Z",
-    "endTime": "2022-09-30T08:45:52.000Z"
-}
+```
+none
 ```
 
 ### **Parameter**
