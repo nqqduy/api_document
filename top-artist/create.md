@@ -11,7 +11,9 @@
 ## **REQUEST**
 
 **Config header**:
+Content-Type: "application/json"
 
+Authorization: "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c"
 **Data raw**
 
 ```json
@@ -26,13 +28,14 @@
 
 ### **Parameter**
 
-|         Field         | Type    | Description         | required |
-| :-------------------: | ------- | ------------------- | -------- |
-|      authorName       | string  | Author name         | yes      |
-|      productName      | string  | Product name        | yes      |
-|         price         | integer | Final selling price | yes      |
-|       tradeDay        | string  | Sale date           | yes      |
-| exhibitionDestination | string  | Selling place       | yes      |
+|         Field         | Type    | Description                                                                                                       | required |
+| :-------------------: | ------- | ----------------------------------------------------------------------------------------------------------------- | -------- |
+|     authorization     | string  | Must be sent with all client requests. This Token helps server to validate request source. Provided by ARTNGUIDE. | yes      |
+|      authorName       | string  | Author name                                                                                                       | yes      |
+|      productName      | string  | Product name                                                                                                      | yes      |
+|         price         | integer | Final selling price                                                                                               | yes      |
+|       tradeDay        | string  | Sale date                                                                                                         | yes      |
+| exhibitionDestination | string  | Selling place                                                                                                     | yes      |
 
 ## **RESPONSE**
 
