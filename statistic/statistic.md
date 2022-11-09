@@ -1,6 +1,6 @@
-## # **Get All Popup By Admin**
+## # **Get All Statistic By Admin**
 
-## **API Get All Popup By Admin**
+## **API Get All Statistic By Admin**
 
 ### **GET**
 
